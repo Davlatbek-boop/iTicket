@@ -16,15 +16,15 @@ export class CustomerAddressService {
     return this.customerAddressSchema.find();
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.customerAddressSchema.findById(id);
   }
 
-  update(id: number, updateCustomerAddressDto: UpdateCustomerAddressDto) {
+  update(id: string, updateCustomerAddressDto: UpdateCustomerAddressDto) {
     return this.customerAddressSchema.findByIdAndUpdate(id, updateCustomerAddressDto);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.customerAddressSchema.findByIdAndDelete(id);
   }
 }

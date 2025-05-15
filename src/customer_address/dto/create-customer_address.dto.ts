@@ -1,13 +1,11 @@
 export class CreateCustomerAddressDto {
       name: string;
     
-      customerId: number;
+      customerId: string;
     
-      country_id: number;
+      regionId: string;
     
-      regionId: number;
-    
-      districtId: number;
+      districtId: string;
     
       street: string;
     

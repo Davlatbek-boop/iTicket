@@ -2,13 +2,13 @@ import { Module } from '@nestjs/common';
 import { CustomerAddressService } from './customer_address.service';
 import { CustomerAddressController } from './customer_address.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { CustomerAddress } from './schemas/customer_address.schema';
+import { CustomerAddress, CustomerAddressSchema } from './schemas/customer_address.schema';
 import { CustomerSchema } from '../customer/schemas/customer.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([{
     name: CustomerAddress.name,
-    schema: CustomerSchema
+    schema: CustomerAddressSchema
   }])],
   controllers: [CustomerAddressController],
   providers: [CustomerAddressService],

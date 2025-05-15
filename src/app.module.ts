@@ -5,6 +5,9 @@ import { AdminModule } from './admin/admin.module';
 import { AuthModule } from './auth/auth.module';
 import { CustomerModule } from './customer/customer.module';
 import { CustomerAddressModule } from './customer_address/customer_address.module';
+import { CustomerCardModule } from './customer_card/customer_card.module';
+import { RegionModule } from './region/region.module';
+import { DistrictModule } from './district/district.module';
 
 @Module({
   imports: [
@@ -13,7 +16,10 @@ import { CustomerAddressModule } from './customer_address/customer_address.modul
     AdminModule,
     AuthModule,
     CustomerModule,
-    CustomerAddressModule
+    CustomerAddressModule,
+    CustomerCardModule,
+    RegionModule,
+    DistrictModule
   ],
   controllers: [],
   providers: [],

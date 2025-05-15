@@ -9,16 +9,13 @@ export class CustomerAddress {
   name: string;
 
   @Prop()
-  customerId: number;
+  customerId: string;
 
   @Prop()
-  country_id: number;
+  regionId: string;
 
   @Prop()
-  regionId: number;
-
-  @Prop()
-  districtId: number;
+  districtId: string;
 
    @Prop()
   street: string;

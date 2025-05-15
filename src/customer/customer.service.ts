@@ -31,6 +31,10 @@ export class CustomerService {
     return this.customerSchema.findById(id);
   }
 
+  findByEmail(email: string) {
+    return this.customerSchema.findOne({email});
+  }
+
   update(id: string, updateCustomerDto: UpdateCustomerDto) {
     return  this.customerSchema.findByIdAndUpdate(id, updateCustomerDto)
   }

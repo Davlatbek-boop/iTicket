@@ -16,15 +16,15 @@ export class VenueService {
     return this.venueSchema.find().populate("regionId").populate("districtId")
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.venueSchema.findById(id).populate("districtId").populate("regionId")
   }
 
-  update(id: number, updateVenueDto: UpdateVenueDto) {
+  update(id: string, updateVenueDto: UpdateVenueDto) {
     return this.venueSchema.findByIdAndUpdate(id, updateVenueDto);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.venueSchema.findByIdAndDelete(id);
   }
 }

@@ -10,6 +10,8 @@ import { RegionModule } from './region/region.module';
 import { DistrictModule } from './district/district.module';
 import { TypesModule } from './types/types.module';
 import { VenueModule } from './venue/venue.module';
+import { VenueTypesModule } from './venue_types/venue_types.module';
+import { SeatTypeModule } from './seat_type/seat_type.module';
 
 @Module({
   imports: [
@@ -24,6 +26,8 @@ import { VenueModule } from './venue/venue.module';
     DistrictModule,
     TypesModule,
     VenueModule,
+    VenueTypesModule,
+    SeatTypeModule,
   ],
   controllers: [],
   providers: [],

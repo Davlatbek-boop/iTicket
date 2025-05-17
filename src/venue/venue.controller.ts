@@ -19,16 +19,16 @@ export class VenueController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.venueService.findOne(+id);
+    return this.venueService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateVenueDto: UpdateVenueDto) {
-    return this.venueService.update(+id, updateVenueDto);
+    return this.venueService.update(id, updateVenueDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.venueService.remove(+id);
+    return this.venueService.remove(id);
   }
 }

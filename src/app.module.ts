@@ -12,6 +12,8 @@ import { TypesModule } from './types/types.module';
 import { VenueModule } from './venue/venue.module';
 import { VenueTypesModule } from './venue_types/venue_types.module';
 import { SeatTypeModule } from './seat_type/seat_type.module';
+import { SeatModule } from './seat/seat.module';
+import { VenuePhotoModule } from './venue_photo/venue_photo.module';
 
 @Module({
   imports: [
@@ -28,6 +30,8 @@ import { SeatTypeModule } from './seat_type/seat_type.module';
     VenueModule,
     VenueTypesModule,
     SeatTypeModule,
+    SeatModule,
+    VenuePhotoModule,
   ],
   controllers: [],
   providers: [],

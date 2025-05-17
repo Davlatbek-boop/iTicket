@@ -15,18 +15,18 @@ export class RegionService {
   }
 
   findAll() {
-    return this.regionSchema.find();
+    return this.regionSchema.find().populate('district')
   }
 
-  findOne(id: number) {
-    return this.regionSchema.findById;
+  findOne(id: string) {
+    return this.regionSchema.findById(id);
   }
 
-  update(id: number, updateRegionDto: UpdateRegionDto) {
+  update(id: string, updateRegionDto: UpdateRegionDto) {
     return this.regionSchema.findByIdAndUpdate(id, updateRegionDto);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.regionSchema.findByIdAndDelete(id);
   }
 }

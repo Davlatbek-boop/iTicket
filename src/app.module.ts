@@ -8,6 +8,8 @@ import { CustomerAddressModule } from './customer_address/customer_address.modul
 import { CustomerCardModule } from './customer_card/customer_card.module';
 import { RegionModule } from './region/region.module';
 import { DistrictModule } from './district/district.module';
+import { TypesModule } from './types/types.module';
+import { VenueModule } from './venue/venue.module';
 
 @Module({
   imports: [
@@ -19,7 +21,9 @@ import { DistrictModule } from './district/district.module';
     CustomerAddressModule,
     CustomerCardModule,
     RegionModule,
-    DistrictModule
+    DistrictModule,
+    TypesModule,
+    VenueModule,
   ],
   controllers: [],
   providers: [],

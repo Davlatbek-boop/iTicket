@@ -1,19 +1,26 @@
-import { Injectable } from '@nestjs/common';
-import { CreateCustomerAddressDto } from './dto/create-customer_address.dto';
-import { UpdateCustomerAddressDto } from './dto/update-customer_address.dto';
-import { InjectModel } from '@nestjs/mongoose';
-import { CustomerAddress } from './schemas/customer_address.schema';
-import { Model } from 'mongoose';
+import { Injectable } from "@nestjs/common";
+import { CreateCustomerAddressDto } from "./dto/create-customer_address.dto";
+import { UpdateCustomerAddressDto } from "./dto/update-customer_address.dto";
+import { InjectModel } from "@nestjs/mongoose";
+import { CustomerAddress } from "./schemas/customer_address.schema";
+import { Model } from "mongoose";
 
 @Injectable()
 export class CustomerAddressService {
-  constructor(@InjectModel(CustomerAddress.name) private readonly customerAddressSchema: Model<CustomerAddress>){}
+  constructor(
+    @InjectModel(CustomerAddress.name)
+    private readonly customerAddressSchema: Model<CustomerAddress>
+  ) {}
   create(createCustomerAddressDto: CreateCustomerAddressDto) {
     return this.customerAddressSchema.create(createCustomerAddressDto);
   }
 
   findAll() {
-    return this.customerAddressSchema.find();
+    return this.customerAddressSchema
+      .find()
+      .populate("customerId")
+      .populate("regionId")
+      .populate("districtId");
   }
 
   findOne(id: string) {
@@ -21,7 +28,10 @@ export class CustomerAddressService {
   }
 
   update(id: string, updateCustomerAddressDto: UpdateCustomerAddressDto) {
-    return this.customerAddressSchema.findByIdAndUpdate(id, updateCustomerAddressDto);
+    return this.customerAddressSchema.findByIdAndUpdate(
+      id,
+      updateCustomerAddressDto
+    );
   }
 
   remove(id: string) {

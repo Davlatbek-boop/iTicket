@@ -13,11 +13,11 @@ export class CustomerCardService {
   }
 
   findAll() {
-    return this.customerCardSchema.find();
+    return this.customerCardSchema.find().populate('customerId')
   }
 
   findOne(id: string) {
-    return this.customerCardSchema.findById(id);
+    return this.customerCardSchema.findById(id).populate('customerId')
   }
 
   update(id: string, updateCustomerCardDto: UpdateCustomerCardDto) {

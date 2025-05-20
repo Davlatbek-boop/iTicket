@@ -11,7 +11,7 @@ export class CustomerAddress {
   @Prop()
   name: string;
 
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'Customer' })
+  @Prop({ type: mongoose.Types.ObjectId, ref: "Customer" })
   customerId: Customer;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Region" })
@@ -20,22 +20,22 @@ export class CustomerAddress {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "District" })
   districtId: District;
 
-   @Prop()
+  @Prop()
   street: string;
 
-   @Prop()
+  @Prop()
   house: string;
 
-   @Prop()
+  @Prop()
   flat: string;
 
-   @Prop()
+  @Prop()
   location: string;
 
-   @Prop()
+  @Prop()
   postIndex: string;
 
-   @Prop()
+  @Prop()
   info: string;
 }
 

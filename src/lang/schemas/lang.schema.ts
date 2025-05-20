@@ -1,12 +1,12 @@
-    import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-    import { HydratedDocument } from "mongoose";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { HydratedDocument } from "mongoose";
 
-    export type LangDocument = HydratedDocument<Lang>;
+export type LangDocument = HydratedDocument<Lang>;
 
-    @Schema()
-    export class Lang {
-    @Prop()
-    name: string;
-    }
+@Schema()
+export class Lang {
+  @Prop()
+  name: string;
+}
 
-    export const LangSchema = SchemaFactory.createForClass(Lang);
+export const LangSchema = SchemaFactory.createForClass(Lang);
